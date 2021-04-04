@@ -1,12 +1,14 @@
 import { GenreResponseProps } from '../App'
 import { Button } from './Button'
+
+import '../styles/sidebar.scss';
 interface SideBarProps {
   genres: GenreResponseProps[];
   selectedGenreId: number;
   setSelectedGenreId: (id: number) => void;
 }
 
-const SideBar = ({ genres, selectedGenreId, setSelectedGenreId }: SideBarProps) => {
+export function SideBar ({ genres, selectedGenreId, setSelectedGenreId }: SideBarProps) {
 
   function handleClickButton (id: number) {
     setSelectedGenreId(id);
@@ -30,5 +32,3 @@ const SideBar = ({ genres, selectedGenreId, setSelectedGenreId }: SideBarProps) 
     </nav>
   )
 }
-
-export default SideBar;
